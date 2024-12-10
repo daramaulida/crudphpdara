@@ -1,3 +1,10 @@
+<?php
+session_start();
+//include "library/liblogin.php";
+//if(cek_login()){
+  //header("location:login.php");
+//}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,8 +42,12 @@
         <a href="#" class="nav-link">Contact</a>
       </li-->
     </ul>
-
-    
+    <ul class="navbar-nav ml-auto ">
+<li class="nav-item d-none d-sm-inline-block">
+        <a href="logout.php" class="nav-link"><i class="fa 
+        fa-power-off"></i>Logout</a>
+      </li>
+      </ul>
   </nav>
   <!-- /.navbar -->
 
@@ -93,6 +104,35 @@
               <p>
                 Admin
               </li>
+              <li class="nav-item">
+            <a href="index.php?halaman=konten" class="nav-link active">
+              <i class="nav-icon fas fa-bookmark"></i>
+              <p>
+               Konten
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: none;">
+              <li class="nav-item">
+                <a href="index.php?halaman=konten" class="nav-link active">
+                  <i class="nav-icon fas fa-bookmark"></i>
+                  <p>Konten</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?halaman=kategori" class="nav-link">
+                  <i class="nav-icon fas fa-table"></i>
+                  <p>Kategori</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?halaman=komentar" class="nav-link">
+                  <i class="nav-icon fas fa-pen"></i>
+                  <p>Komentar</p>
+                </a>
+              </li>
+            </ul>
+          </li>
              
 
                 </a>
@@ -129,17 +169,26 @@
 if(isset($_GET['halaman'])){
   switch($_GET['halaman']) {
    case"admin":
-    include("views/admin.php");
+    include("views/admin/admin.php");
     break;
     case"home":
       include("views/dashboard.php");
       break;
     case"tambahadmin":
-    include("views/formpengguna.php");
+    include("views/admin/formadmin.php");
     break;
     case"editadmin":
-    include("views/formpengguna.php");
+    include("views/admin/editadmin.php");
     break;
+    case"konten":
+      include("views/konten/konten.php");
+      break;
+    case"kategori":
+      include("views/kategori/kategori.php");
+      break;
+      case"komentar":
+        include("views/komentar/komentar.php");
+        break;
   }
 }else{
   include("views/dashboard.php");

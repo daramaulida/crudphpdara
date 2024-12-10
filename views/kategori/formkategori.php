@@ -1,6 +1,6 @@
 <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Tambah Pengguna</h3>
+                <h3 class="card-title">Tambah kategori</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -24,7 +24,7 @@
                   <div class="form-group">
                         <label>Select</label>
                         <select class="form-control" name="level">
-                          <option value="admin">Admin</option>
+                          <option value="kategori">kategori</option>
                           <option value="user">User</option>
                         </select>
                       </div>

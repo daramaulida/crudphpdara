@@ -42,10 +42,10 @@
                     <td>$data[username]</td>
                     <td>$data[level]</td>
                     <td><div class='btn goup'>
-                    <a href='index.php?halaman=editpengguna&id=$data[id]' class='btn btn-sm btn-success' 
+                    <a href='index.php?halaman=editadmin&id=$data[id]' class='btn btn-sm btn-success' 
                     title='ubah data'><i class='fa fa-pencil-alt'>
                     </i> </a>
-                    <a href='#' class='btn btn-sm btn-danger' 
+                    <a href='db/dbpengguna.php?proses=hapus&id=$data[id]' class='btn btn-sm btn-danger' 
                     title='hapus data'><i class='fa fa-trash-alt'>
                     </i> </a>
                    </div> </td>

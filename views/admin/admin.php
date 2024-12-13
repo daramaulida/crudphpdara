@@ -38,14 +38,14 @@
                        echo "
                     <tr>
                     <td>$no</td>
-                    <td>$data[nama]</td>
-                    <td>$data[username]</td>
+                    <td>$data[nama_admin]</td>
+                    <td>$data[username_admin]</td>
                     <td>$data[level]</td>
                     <td><div class='btn goup'>
-                    <a href='index.php?halaman=editadmin&id=$data[id]' class='btn btn-sm btn-success' 
+                    <a href='index.php?halaman=editadmin&id_admin=$data[id_admin]' class='btn btn-sm btn-success' 
                     title='ubah data'><i class='fa fa-pencil-alt'>
                     </i> </a>
-                    <a href='db/dbpengguna.php?proses=hapus&id=$data[id]' class='btn btn-sm btn-danger' 
+                    <a href='db/dbpengguna.php?proses=hapus&id_admin=$data[id_admin]' class='btn btn-sm btn-danger' 
                     title='hapus data'><i class='fa fa-trash-alt'>
                     </i> </a>
                    </div> </td>

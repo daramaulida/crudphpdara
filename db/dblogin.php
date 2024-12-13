@@ -6,8 +6,8 @@ $password=md5($_POST['password']);
 include "../koneksi.php";
 $sql=mysqli_query($koneksi,"SELECT * FROM admin WHERE username='$username'AND 
 password ='$password'");
-$jumlahpengguna=mysqli_num_rows($sql);
-$data=mysqli_fetch_array($sql);
+
+
 
 if($jumlahpengguna>0){
     $_SESSION['username']=$data['username'];

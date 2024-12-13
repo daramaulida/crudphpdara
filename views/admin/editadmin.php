@@ -1,52 +1,41 @@
 <?php
 include "koneksi.php";
-$id = $_GET['id'];
-$sql = mysqli_query($koneksi, "SELECT * FROM admin WHERE id='$id'");
+$id_admin = $_GET['id_admin'];
+
+$sql = mysqli_query($koneksi, "SELECT * FROM admin WHERE id_admin='$id_admin'");
 $data = mysqli_fetch_array($sql);
 
 ?>
 
 <div class="card card-primary">
   <div class="card-header">
-    <h3 class="card-title">Edit Data Admin</h3>
+    <h3 class="card-title">Edit Data admin</h3>
   </div>
   <!-- /.card-header -->
   <!-- form start -->
   <form action="db/dbpengguna.php?proses=update" method="POST">
-    <input type="hidden" value="<?= $data['id'] ?>" name="id" id="id">
+    <input type="hidden" value="<?= $data['id_admin'] ?>" name="id_admin" id_admin="id_admin">
     <div class="card-body">
       <div class="form-group">
-        <label for="nama">Nama</label>
-        <input type="text" class="form-control" id="nama" name="nama"
-          placeholder="Nama Anda" value="<?= $data['nama'] ?>" required>
+        <label for="nama_admin">nama_admin</label>
+        <input type="text" class="form-control" id="nama_admin" name="nama_admin"
+          placeholder="nama" value="<?= $data['nama_admin'] ?>" required>
       </div>
       <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" name="username"
-          placeholder="Username Anda" value="<?= $data['username'] ?>" required>
+        <label for="username_admin">username_admin</label>
+        <input type="text" class="form-control" id="username_admin" name="username_admin"
+          placeholder="username_admin" value="<?= $data['username_admin'] ?>" required>
       </div>
       <div class="form-group">
         <label>Select</label>
         <select class="form-control" name="level">
           <option value="admin" <?php if ($data['level'] == 'admin') 
-          echo "selected"; ?>>Admin</option>
+          echo "selected"; ?>>admin</option>
           <option value="user" <?php if ($data['level'] == 'user') 
           echo "selected"; ?>>User</option>
         </select>
       </div>
-      <!-- <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                      </div>
-                    </div>
-                      </div>-->
-
+      
     </div>
     <!-- /.card-body -->
 

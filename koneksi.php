@@ -2,7 +2,8 @@
 $server="localhost";
 $user_db="root";
 $pass_db="";
-$db_nama="cruddara";
+$db_nama="cmsresepmakanandara";
+
 
 $koneksi=mysqli_connect($server,$user_db,$pass_db,$db_nama);
 

@@ -1,30 +1,27 @@
 <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Tambah Admin</h3>
+                <h3 class="card-title">Tambah admin</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form action="db/dbpengguna.php?proses=insert" method="POST">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="nama">Nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama"
-                     placeholder="Nama Anda" required>
+                    <label for="nama_admin">nama</label>
+                    <input type="text" class="form-control" id="nama_admin" name="nama_admin" placeholder="nama Anda" required>
                   </div>
                   <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" name="username"
-                     placeholder="Username Anda" required>
+                    <label for="username_admin">username</label>
+                    <input type="text" class="form-control" id="username_admin" name="username_admin" placeholder="username Anda" required>
                   </div>
                   <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" id="password"
-                     placeholder="Password" required>
+                    <label for="password_admin">Password</label>
+                    <input type="password_admin" class="form-control" id="password_admin" name="password_admin" placeholder="Password_admin" required>
                   </div>
                   <div class="form-group">
                         <label>Select</label>
                         <select class="form-control" name="level">
-                          <option value="admin">Admin</option>
+                          <option value="admin">admin</option>
                           <option value="user">User</option>
                         </select>
                       </div>
